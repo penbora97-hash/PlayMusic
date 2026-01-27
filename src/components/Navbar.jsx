@@ -103,13 +103,20 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-3xl bg-white/10 border-b border-white/20 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <NavLink to="/" className="font-bold text-3xl text-white">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <NavLink
+              to="/"
+              className="font-bold text-xl sm:text-2xl md:text-3xl text-white"
+            >
               Music
             </NavLink>
-            <img src={img} alt="logo" className="w-12 h-12" />
+            <img
+              src={img}
+              alt="logo"
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+            />
           </div>
 
           {/* Desktop Menu */}
@@ -122,7 +129,7 @@ const Navbar = () => {
                       ? "/"
                       : `/${item.toLowerCase().replace(/\s+/g, "-")}`
                   }
-                  className="text-white font-semibold hover:text-blue-400  text-lg transition-colors duration-300"
+                  className="text-white font-semibold hover:text-blue-400 text-lg transition-colors duration-300"
                 >
                   {item}
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
@@ -152,7 +159,7 @@ const Navbar = () => {
                         <div
                           key={song.id}
                           className="relative overflow-hidden bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-3 hover:border-purple-500/50 transition-all duration-300 group cursor-pointer mb-2"
-                          onClick={() => handleSearchClick(song)}
+                          onMouseDown={() => handleSearchClick(song)}
                         >
                           <div className="flex gap-3 items-center">
                             <img
@@ -205,19 +212,55 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <RiCloseCircleLine size={30} /> : <IoMenuSharp size={30} />}
-          </button>
+          {/* Mobile Icons & Menu Button */}
+          <div className="flex md:hidden items-center gap-3 sm:gap-4">
+            <div 
+              onClick={() => setShowLogin(true)}
+              className="flex flex-col items-center gap-0.5 cursor-pointer group"
+            >
+              <BiLogInCircle
+                size={20}
+                className="text-white group-hover:text-purple-400 transition-colors"
+              />
+              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">Login</span>
+            </div>
+            
+            <div 
+              onClick={() => setShowSignUp(true)}
+              className="flex flex-col items-center gap-0.5 cursor-pointer group"
+            >
+              <BsPersonPlus
+                size={18}
+                className="text-white group-hover:text-purple-400 transition-colors"
+              />
+              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">Sign Up</span>
+            </div>
+            
+            <div 
+              onClick={() => setShowCart(true)}
+              className="flex flex-col items-center gap-0.5 cursor-pointer group"
+            >
+              <IoIosCart
+                size={20}
+                className="text-white group-hover:text-purple-400 transition-colors"
+              />
+              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">Cart</span>
+            </div>
+            
+            <button className="text-white ml-1" onClick={() => setOpen(!open)}>
+              {open ? (
+                <RiCloseCircleLine size={26} />
+              ) : (
+                <IoMenuSharp size={26} />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu & search */}
         {open && (
-          <div className="md:hidden bg-white/10 p-4 flex flex-col gap-3">
-            <div ref={mobileSearchRef}>
+          <div className="md:hidden bg-white/10 backdrop-blur-xl p-3 sm:p-4 flex flex-col gap-3 border-t border-white/10">
+            <div className="relative" ref={mobileSearchRef}>
               <input
                 type="text"
                 value={query}
@@ -227,8 +270,47 @@ const Navbar = () => {
                 placeholder="Search songs..."
                 className="w-full rounded-full px-4 py-2 backdrop-blur-2xl text-white placeholder-white/80 shadow-lg border-none focus:outline-none focus:ring-2 focus:ring-purple-400"
               />
+              {query && showResults && (
+                <div className="absolute top-full mt-2 w-full left-0 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl border border-purple-500/30 max-h-80 overflow-y-auto z-50 backdrop-blur-xl">
+                  {filteredSongs.length ? (
+                    <div className="p-2">
+                      {filteredSongs.map((song) => (
+                        <div
+                          key={song.id}
+                          className="relative overflow-hidden bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-2 sm:p-3 hover:border-purple-500/50 transition-all duration-300 group cursor-pointer mb-2"
+                          onMouseDown={() => handleSearchClick(song)}
+                        >
+                          <div className="flex gap-2 sm:gap-3 items-center">
+                            <img
+                              src={song.image}
+                              alt={song.title}
+                              className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg object-cover shadow-lg group-hover:shadow-purple-500/50 transition-shadow duration-200"
+                              onError={(e) => {
+                                e.target.src =
+                                  "https://via.placeholder.com/64x64/8B5CF6/FFFFFF?text=Music";
+                              }}
+                            />
+                            <div className="flex flex-col justify-center flex-1 min-w-0">
+                              <p className="text-white text-sm font-bold line-clamp-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-pink-300 transition-all">
+                                {song.title}
+                              </p>
+                              <p className="text-gray-400 text-xs line-clamp-1 group-hover:text-gray-300 transition-colors mt-0.5">
+                                {song.artist}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="p-6 text-center text-gray-400 text-sm">
+                      No songs found. Try different keywords.
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
-            <ul className="flex flex-col gap-3 mt-3 text-white">
+            <ul className="flex flex-col gap-2 sm:gap-3 mt-2 text-white">
               {["Home", "Artist", "Playlist", "About Us"].map((item) => (
                 <li key={item}>
                   <NavLink
@@ -237,7 +319,7 @@ const Navbar = () => {
                         ? "/"
                         : `/${item.toLowerCase().replace(/\s+/g, "-")}`
                     }
-                    className="font-semibold hover:text-blue-400"
+                    className="block font-semibold hover:text-blue-400 py-1 text-base sm:text-lg"
                     onClick={() => setOpen(false)}
                   >
                     {item}
@@ -252,40 +334,40 @@ const Navbar = () => {
       {/* Login Modal */}
       {showLogin && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black/70 z-50"
+          className="fixed inset-0 flex items-center justify-center bg-black/70 z-50 p-4"
           onClick={() => setShowLogin(false)}
         >
           <div
-            className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl w-full max-w-md relative shadow-2xl border border-gray-700"
+            className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl w-full max-w-md relative shadow-2xl border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setShowLogin(false)}
-              className="absolute top-4 right-4 text-white text-3xl hover:text-red-500 transition-colors"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white text-3xl hover:text-red-500 transition-colors"
             >
               ×
             </button>
-            <h2 className="text-white text-2xl mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Welcome Back
             </h2>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 sm:gap-4">
               <input
                 type="email"
                 placeholder="Email"
-                className="px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
               />
               <input
                 type="password"
                 placeholder="Password"
-                className="px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
               />
               <button
                 onClick={handleLogin}
-                className="px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 mt-2"
+                className="px-4 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 mt-2 text-sm sm:text-base"
               >
                 Login
               </button>
-              <p className="text-gray-400 text-sm text-center mt-2">
+              <p className="text-gray-400 text-xs sm:text-sm text-center mt-2">
                 Don't have an account?{" "}
                 <span
                   className="text-purple-400 hover:text-purple-300 cursor-pointer ml-1"
@@ -305,50 +387,50 @@ const Navbar = () => {
       {/* Sign Up Modal */}
       {showSignUp && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black/70 z-50"
+          className="fixed inset-0 flex items-center justify-center bg-black/70 z-50 p-4"
           onClick={() => setShowSignUp(false)}
         >
           <div
-            className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl w-full max-w-md relative shadow-2xl border border-gray-700"
+            className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl w-full max-w-md relative shadow-2xl border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setShowSignUp(false)}
-              className="absolute top-4 right-4 text-white text-3xl hover:text-red-500 transition-colors"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white text-3xl hover:text-red-500 transition-colors"
             >
               ×
             </button>
-            <h2 className="text-white text-2xl mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Create Account
             </h2>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 sm:gap-4">
               <input
                 type="text"
                 placeholder="Full Name"
-                className="px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
               />
               <input
                 type="password"
                 placeholder="Password"
-                className="px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
               />
               <input
                 type="password"
                 placeholder="Confirm Password"
-                className="px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
               />
               <button
                 onClick={handleSignUp}
-                className="px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 mt-2"
+                className="px-4 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 mt-2 text-sm sm:text-base"
               >
                 Sign Up
               </button>
-              <p className="text-gray-400 text-sm text-center mt-2">
+              <p className="text-gray-400 text-xs sm:text-sm text-center mt-2">
                 Already have an account?{" "}
                 <span
                   className="text-purple-400 hover:text-purple-300 cursor-pointer ml-1"
@@ -368,30 +450,40 @@ const Navbar = () => {
       {/* Cart Modal */}
       {showCart && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black/70 z-50"
+          className="fixed inset-0 flex items-center justify-center bg-black/70 z-50 p-4"
           onClick={() => setShowCart(false)}
         >
           <div
-            className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl w-full max-w-md relative shadow-2xl border border-gray-700"
+            className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl w-full max-w-md relative shadow-2xl border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setShowCart(false)}
-              className="absolute top-4 right-4 text-white text-3xl hover:text-red-500 transition-colors"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white text-3xl hover:text-red-500 transition-colors"
             >
               ×
             </button>
-            <h2 className="text-white text-2xl mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Shopping Cart
             </h2>
-            <div className="flex flex-col gap-4 text-center py-12">
-              <IoIosCart size={64} className="mx-auto text-gray-600 mb-4" />
+            <div className="flex flex-col gap-4 text-center py-8 sm:py-12">
+              <IoIosCart
+                size={56}
+                className="mx-auto text-gray-600 mb-4 sm:hidden"
+              />
+              <IoIosCart
+                size={64}
+                className="mx-auto text-gray-600 mb-4 hidden sm:block"
+              />
+              <p className="text-gray-400 text-sm sm:text-base">
+                Your cart is empty
+              </p>
               <button
                 onClick={() => {
                   setShowCart(false);
                   navigate("/premium");
                 }}
-                className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 mt-6"
+                className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 mt-4 sm:mt-6 text-sm sm:text-base"
               >
                 Get Premium
               </button>

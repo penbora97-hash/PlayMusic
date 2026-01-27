@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Premium() {
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-16 mt-16">
+    <div className="min-h-screen bg-gray-800 text-white px-6 py-16 mt-16">
           {/* Left */}
         <div className="ml-6 ">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
