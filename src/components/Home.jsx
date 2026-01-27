@@ -8,7 +8,7 @@ import Card from "./Card";
 const Home = () => {
   return (
    <div>
-     <div className="min-h-screen bg-gray-900 selection:bg-violet-500/30">
+     <div className="min-h-screen scroll-smooth bg-gray-900 selection:bg-violet-500/30">
       {/* Hero Section - ប្តូរ h-[800px] ទៅជា min-h-screen ឬ h-auto សម្រាប់ Mobile */}
       <div className="w-full lg:h-[800px] min-h-screen bg-gray-800 relative overflow-hidden flex items-center">
         
@@ -98,6 +98,26 @@ const Home = () => {
       </div>
     </div>
        <Card />
+         <footer className="fixed bottom-0 left-0 w-full backdrop-blur-3xl text-white p-4 md:px-8 shadow-2xl z-50">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        
+        {/* Text Content */}
+        <div className="text-center md:text-left">
+          <p className="text-xs uppercase tracking-widest font-semibold mb-1">
+            Preview of Spotify
+          </p>
+          <p className="text-sm md:text-base font-medium">
+            Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+          </p>
+        </div>
+
+        {/* Action Button */}
+        <button className="bg-white text-black px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform active:scale-95 whitespace-nowrap">
+          Sign up free
+        </button>
+        
+      </div>
+    </footer>
    </div>
   );
 };

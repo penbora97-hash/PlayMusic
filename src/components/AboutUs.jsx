@@ -124,74 +124,83 @@ const AboutUs = () => {
           {/* Team Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="bg-gray-300 rounded-2xl h-130 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
-                <div className="rounded-2xl  hover:scale-125 transform transition duration-200 ">
-                  <img
-                    src={img}
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
-                </div>
-                <h3 className="text-lg font-semibold opacity-80  text-white hover:text-blue-600">
+            <div className="relative rounded-2xl overflow-hidden h-[420px] bg-gray-800">
+              {/* Image */}
+              <img
+                src={img}
+                alt="Pen Bora"
+                className="w-full h-full object-cover transition-transform duration-300 md:hover:scale-110"
+              />
+
+              {/* Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm text-white p-4">
+                <h3 className="text-lg font-semibold hover:text-blue-500 transition">
                   Pen Bora
                 </h3>
                 <p className="text-sm opacity-80 font-bold">Team Leader</p>
 
-                <div className="flex gap-3 mt-2">
-                  <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">
-                    <a href="https://www.facebook.com/share/1JqMrE32ao/">
-                      <FaFacebook className="hover:text-blue-600 hover:scale-110 transform transition duration-150 text-xl" />{" "}
-                    </a>
-                  </span>
-                  <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">
-                    <a href="https://t.me/pen_bora">
-                      <FaTelegramPlane className="hover:text-blue-600 hover:scale-110 transform transition duration-150 text-xl" />
-                    </a>
-                  </span>
-                  <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">
-                    <a href="#">
-                      <FaLinkedin className="hover:text-yellow-500 hover:scale-110 transform transition duration-150 text-xl" />
-                    </a>
-                  </span>
+                <div className="flex gap-3 mt-3">
+                  <a
+                    href="https://www.facebook.com/share/1JqMrE32ao/"
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:scale-110 transition"
+                  >
+                    <FaFacebook className="text-xl hover:text-blue-600" />
+                  </a>
+
+                  <a
+                    href="https://t.me/pen_bora"
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:scale-110 transition"
+                  >
+                    <FaTelegramPlane className="text-xl hover:text-blue-500" />
+                  </a>
+
+                  <a
+                    href="#"
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:scale-110 transition"
+                  >
+                    <FaLinkedin className="text-xl hover:text-yellow-500" />
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gray-300 rounded-2xl h-130 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
-                <div className="hover:scale-125 transform transition duration-150">
-                  <img
-                    src={img1}
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
-                </div>
-                <h3 className="text-lg font-bold opacity-80 hover:text-gray-900 text-white">
-                  Hang panharajame
-                </h3>
-                <p className="text-sm opacity-80 font-bold">Number</p>
+            <div className="relative rounded-2xl overflow-hidden h-[420px] bg-gray-800">
+              {/* Image */}
+              <img
+                src={img1}
+                alt="Hang Panharajame"
+                className="w-full h-full object-cover transition-transform duration-300 md:hover:scale-110"
+              />
 
-                <div className="flex gap-3 mt-2">
-                  <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">
-                    <a
-                      href="https://www.facebook.com/share/1BiEPheJN2/"
-                      className="hover:scale-110 transform transition duration-150"
-                    >
-                      <FaFacebook className="hover:text-blue-600 text-xl" />
-                    </a>
-                  </span>
-                  <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">
-                    <a href="https://t.me./Hangpanharajame">
-                      <FaTelegramPlane className="hover:text-blue-600 hover:scale-110 transform transition duration-150 text-xl" />
-                    </a>
-                  </span>
-                  <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">
-                    <a href="#">
-                      <FaLinkedin className="hover:text-yellow-500 hover:scale-110 transform transition duration-150 text-xl" />
-                    </a>
-                  </span>
+              {/* Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm text-white p-4">
+                <h3 className="text-lg font-semibold hover:text-blue-500 transition">
+                  Hang Panharajame
+                </h3>
+                <p className="text-sm opacity-80 font-bold">Member</p>
+
+                <div className="flex gap-3 mt-3">
+                  <a
+                    href="https://www.facebook.com/share/1BiEPheJN2/"
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:scale-110 transition"
+                  >
+                    <FaFacebook className="text-xl hover:text-blue-600" />
+                  </a>
+
+                  <a
+                    href="https://t.me/Hangpanharajame"
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:scale-110 transition"
+                  >
+                    <FaTelegramPlane className="text-xl hover:text-blue-500" />
+                  </a>
+
+                  <a
+                    href="#"
+                    className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:scale-110 transition"
+                  >
+                    <FaLinkedin className="text-xl hover:text-yellow-500" />
+                  </a>
                 </div>
               </div>
             </div>

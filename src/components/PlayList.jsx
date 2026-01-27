@@ -114,7 +114,7 @@ export default function App() {
 
   if (view === "home") {
     return (
-      <div className="min-h-screen  bg-gray-900 selection:bg-violet-500/30 p-8 pb-32 mt-10">
+      <div className="min-h-screen   bg-gray-700  p-8 pb-32 mt-10">
         {/* Header */}
         
 
@@ -147,9 +147,9 @@ export default function App() {
   const allSongs = artist.albums.flatMap(al => al.songs);
 
   return (
-    <div className="min-h-screen bg-gray-300 pb-32">
+    <div className="min-h-screen bg-gray-800 pb-32">
       {/* Header with Back Button */}
-      <div className="bg-gray-500 selection:bg-violet-500/30px-6 pt-8 pb-8">
+      <div className="bg-gray-600 selection:bg-violet-500/30px-6 pt-8 pb-8">
         {/* Artist Profile with Back Button */}
         <div className="flex items-center justify-between mb-6 mt-15">
           {/* Back Button - Left Side */}
@@ -177,9 +177,7 @@ export default function App() {
           <p className="text-gray-600 text-sm mb-4">{artist.listens}</p>
           
           <div className="flex gap-4">
-            <button className="px-8 py-3 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 transition shadow-lg">
-              Play
-            </button>
+          
             <button 
               onClick={() => setIsFollowing(!isFollowing)}
               className={`px-6 py-3 rounded-full font-semibold transition ${
@@ -200,11 +198,11 @@ export default function App() {
       {/* Albums List */}
       <div className="px-6">
         {artist.albums.map((album) => (
-          <div key={album.id} className="mb-6">
+          <div key={album.id} className="mb-6 ">
             {/* Album Header - Clickable */}
             <div 
               onClick={() => toggleAlbum(album.id)}
-              className="flex items-center justify-between py-4 cursor-pointer hover:bg-gray-50 rounded-lg px-3 transition"
+              className="flex items-center justify-between py-4 cursor-pointer bg-gray-200 hover:bg-gray-50 rounded-lg px-3 transition"
             >
               <h2 className="text-lg font-bold text-gray-900">{album.title}</h2>
               <div className="flex items-center gap-2">
@@ -219,7 +217,7 @@ export default function App() {
             
             {/* Songs List - Expandable */}
             {expandedAlbum === album.id && (
-              <div className="space-y-3 mt-2 animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="space-y-3 mt-2 animate-in fade-in slide-in-from-top-2 duration-300 bg-gray-300 rounded-2xl">
                 {album.songs.map((s, idx) => {
                   const allSongsIndex = allSongs.findIndex(song => song.id === s.id);
                   const isPlaying = song?.id === s.id && playing;
@@ -228,7 +226,7 @@ export default function App() {
                     <div
                       key={s.id}
                       onClick={() => playSong(s, allSongsIndex, allSongs)}
-                      className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 cursor-pointer transition"
+                      className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-100 cursor-pointer transition"
                     >
                       {/* Album Art */}
                       <div className="relative flex-shrink-0">
@@ -247,7 +245,7 @@ export default function App() {
                       {/* Song Info */}
                       <div className="flex-1 min-w-0">
                         <h3 className="text-gray-900 font-semibold truncate">{s.title}</h3>
-                        <p className="text-gray-500 text-sm truncate">{s.album} • {s.plays} plays</p>
+                     
                       </div>
 
                       {/* Duration */}

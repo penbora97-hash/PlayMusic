@@ -128,7 +128,7 @@ const Card = ({songs}) => {
   return (
     <div className="min-h-screen bg-gradient-to-br bg-gray-900 selection:bg-violet-500/30 p-4 flex flex-col items-center">
       <div className="p-8 text-center max-w-2xl">
-        <h2 className="text-4xl font-bold text-purple-700 mb-4">🎵 Enjoy Your Music</h2>
+        <h2 className="text-5xl font-bold text-white  mb-4">🎵 Enjoy Your Music</h2>
         <p className="text-gray-500 text-2xl">បទចម្រៀងដែលអ្នកចូលចិត្ត</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl">

@@ -14,7 +14,7 @@ export const items = [
   {
     id: 3,
     name: "Noly Record",
-    image: "https://i.scdn.co/image/ab6761610000e5ebd4bb9d150a7f0a566ad74df1",
+    image: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/ff/98/42ff984a-bdae-9559-1a11-7b2b264b0e79/cover.jpg/1200x630bb.jpg",
     song: 10
   },
   {
@@ -58,5 +58,53 @@ export const items = [
     name: "NPN",
     image: "https://viberate-upload.ams3.cdn.digitaloceanspaces.com/prod/entity/artist/npn-8AtUX",
     song : 12
-  }
+  },
+  {
+    id: 11,
+    name: "Meezy24K",
+    image: "https://i.scdn.co/image/ab67616d0000b273b8dbbe9237504c18465c614e",
+    song : 12
+  },
+  {
+    id: 12,
+    name: "TCN Tomie",
+    image: "https://viberate-upload.ams3.cdn.digitaloceanspaces.com/prod/entity/artist/ycn-tomie-TPBPB",
+    song : 12
+  },
+  {
+    id: 13,
+    name: "King Tong",
+    image: "https://i.scdn.co/image/ab6761610000e5eba6acd446e15da555ceb12d30",
+    song : 12
+  },
+  {
+    id: 14,
+    name: "YCN Rakie",
+    image: "https://i.ytimg.com/vi/nAVCDIVGDe8/hqdefault.jpg?v=690e3d74",
+    song : 12
+  },
+  {
+    id: 15,
+    name: "Mut Phearin",
+    image: "https://i.scdn.co/image/ab67616100005174adb8520950efd6359fd30262",
+    song : 12
+  },
+  {
+    id: 16,
+    name: "Hasha",
+    image: "https://i.ytimg.com/vi/xf_NLvRRauY/hqdefault.jpg",
+    song : 12
+  },
+  {
+    id: 17,
+    name: "YCN Dizzy",
+    image: "https://i.ytimg.com/vi/A1EHYJzUNiI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCf7ISssB6hi28xznRUzUvTHUYevw",
+    song : 12
+  },
+  {
+    id: 18,
+    name: "ZeDes",
+    image: "https://www.popular.com.kh/wp-content/uploads/2024/11/458203427_1037721998360224_6333286583551203107_n.jpg",
+    song : 12
+  },
 ];

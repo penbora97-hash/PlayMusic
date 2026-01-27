@@ -7,23 +7,27 @@ import PlayList from "./components/PlayList";
 import AboutUs from "./components/AboutUs";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
- 
+
+import Premium from "./components/Premium";
+import SongPage from "./components/SongPage";
+
 const App = () => {
   return (
     <div>
-      
       <BrowserRouter>
         <Navbar />
-      
-        <Routes>
-          <Route path="/" element={<Home />}/>
 
+        <Routes>
+          <Route path="/premium" element={<Premium />} />
+          <Route path="/" element={<Home />} />
           <Route path="/artist" element={<Artist />} />
           <Route path="/playlist" element={<PlayList />} />
+
+          <Route path="/song/:id" element={<SongPage />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
