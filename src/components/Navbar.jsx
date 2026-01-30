@@ -6,6 +6,7 @@ import { RiCloseCircleLine } from "react-icons/ri";
 import { IoIosCart } from "react-icons/io";
 import { BiLogInCircle } from "react-icons/bi";
 import { BsPersonPlus } from "react-icons/bs";
+import { FaMusic } from "react-icons/fa6";
 
 // Import data
 import { musicData } from "../data";
@@ -108,15 +109,11 @@ const Navbar = () => {
           <div className="flex items-center gap-1 sm:gap-2">
             <NavLink
               to="/"
-              className="font-bold text-xl sm:text-2xl md:text-3xl text-white"
+              className="font-bold text-xl sm:text-2xl md:text-3xl text-orange-500 "
             >
-              Music
+             <span className="text-white">i</span>Music
             </NavLink>
-            <img
-              src={img}
-              alt="logo"
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
+           <FaMusic className="text-white text-2xl" />
           </div>
 
           {/* Desktop Menu */}
@@ -194,16 +191,17 @@ const Navbar = () => {
 
             {/* Icons */}
             <div className="flex items-center gap-4">
-              <BiLogInCircle
-                size={22}
-                onClick={() => setShowLogin(true)}
-                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200"
-              />
-              <BsPersonPlus
-                size={20}
-                onClick={() => setShowSignUp(true)}
-                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200"
-              />
+              <p  onClick={() => setShowLogin(true)}
+                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200">
+                  Login
+               
+             </p>
+              <p  onClick={() => setShowSignUp(true)}
+                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200">
+               {/* // size={20} */}
+               Sign up
+               
+              </p>
               <IoIosCart
                 size={22}
                 onClick={() => setShowCart(true)}
@@ -398,7 +396,7 @@ const Navbar = () => {
               onClick={() => setShowSignUp(false)}
               className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white text-3xl hover:text-red-500 transition-colors"
             >
-              ×
+              
             </button>
             <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Create Account
@@ -475,9 +473,7 @@ const Navbar = () => {
                 size={64}
                 className="mx-auto text-gray-600 mb-4 hidden sm:block"
               />
-              <p className="text-gray-400 text-sm sm:text-base">
-                Your cart is empty
-              </p>
+              
               <button
                 onClick={() => {
                   setShowCart(false);

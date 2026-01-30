@@ -1,79 +1,114 @@
-import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import React from "react"
 import { FaTelegram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+ 
+
+  FaYoutube,
+} from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
+
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-gray-700 to-gray-900 backdrop-blur-3xl border-t border-white/20 text-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between items-center gap-12">
-        {/* Left: Brand */}
-        <div className="flex flex-col items-center md:items-start gap-4">
-          <h1 className="text-4xl font-extrabold text-purple-400">Music App</h1>
+    <footer className="bg-[#1f2937] text-gray-300">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
 
-          <p className="text-lg text-gray-300 text-center md:text-left max-w-md leading-relaxed">
-            Stream your favorite songs, discover top artists, and enjoy
-            high-quality music anytime, anywhere.
+        {/* Logo & Description */}
+        <div>
+          <h1 className="text-2xl font-bold text-white mb-4">
+            i<span className="text-orange-500">Music</span>
+          </h1>
+          <p className="text-sm leading-relaxed mb-6">
+            Music connects emotions, tells stories, and brings people together.
+            Discover new sounds, playlists, and artists that move your soul.
           </p>
 
-          <p className="text-base text-gray-400">
-            © {new Date().getFullYear()} Music App. All rights reserved.
-          </p>
+          {/* Social Icons */}
+        
         </div>
 
-        {/* Center: Links */}
-        <div className="flex flex-col gap-6 text-center md:text-left">
-          <a
-            href="/"
-            className="text-2xl font-bold text-white hover:text-purple-400 transition"
-          >
-            Home
-          </a>
-
-          <a
-            href="/artist"
-            className="text-2xl font-bold text-white hover:text-purple-400 transition"
-          >
-            Artist
-          </a>
-
-          <a
-            href="/playlist"
-            className="text-2xl font-bold text-white hover:text-purple-400 transition"
-          >
-            Playlist
-          </a>
-
-          <a
-            href="/about-us"
-            className="text-2xl font-bold text-white hover:text-purple-400 transition"
-          >
-            About Us
-          </a>
+        {/* Quick Links */}
+        <div>
+          <h2 className="text-white font-semibold mb-4">Quick Links</h2>
+          <ul className="space-y-3 text-sm">
+            <li className="hover:text-white cursor-pointer">
+              <a href="/">
+                About Our Music
+              </a>
+            </li>
+            <li className="hover:text-white cursor-pointer">
+              <a href="/artist">
+                Artists
+              </a>
+            </li>
+            <li className="hover:text-white cursor-pointer">
+              <a href="/playlist ">
+                Albums
+              </a>
+            </li>
+            <li className="hover:text-white cursor-pointer">Privacy & Policy</li>
+          </ul>
         </div>
 
-        {/* Right: Social Icons */}
-        <div className="flex flex-col items-center gap-5">
-          <p className="text-lg text-gray-400 font-semibold">Follow us</p>
+        {/* Company */}
+        <div>
+          <h2 className="text-white font-semibold mb-4">Music Hub</h2>
+          <ul className="space-y-3 text-sm">
+            <li className="hover:text-white cursor-pointer">
+              <a href="/about-us">
+                About Us
+              </a>
+            </li>
+            <li className="hover:text-white cursor-pointer">
+              <a href="/premium">
+                Get Premium
+              </a>
+            </li>
+            <li className="hover:text-white cursor-pointer">Latest Releases</li>
+            <li className="hover:text-white cursor-pointer">Submit Your Music</li>
+          </ul>
+        </div>
 
-          <div className="flex gap-6">
-            <a href="https://www.facebook.com/share/1JqMrE32ao/" className="bg-white/10 hover:bg-white/20 p-5 rounded-full transition">
-              <FaFacebookF
-                size={20}
-                className="text-white hover:text-blue-500"
-              />
-            </a>
+        {/* Contact */}
+        <div>
+          <h2 className="text-white font-semibold mb-4">Contact Us</h2>
+          <ul className="space-y-3 text-sm">
            
-            <a className="bg-white/10 hover:bg-white/20 p-5 rounded-full transition">
-              <FaInstagram
-                size={20}
-                className="text-white hover:text-pink-500"
-              />
-            </a>
-            <a href="https://t.me/Hangpanharajame"  className="bg-white/10 hover:bg-white/20 p-5 rounded-full transition">
-             <FaTelegram   size={20} className="text-white hover:text-red-500" />
-            </a>
+            <li>musicworld@gmail.com</li>
+            <li>+880 1747 348 731</li>
+              <div className="flex gap-4">
+          <a href="https://www.facebook.com/share/1BiEPheJN2/">
+              <span className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-700 cursor-pointer">
+              <FaFacebookF />
+            </span>
+          </a>
+         
+          <a href=" https://www.instagram.com/panharajame?igsh=MXFoaDhwbzFidWI0dA%3D%3D&utm_source=qr">
+              <span className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-red-800 cursor-pointer">
+              <FaInstagram />
+            </span>
+          </a>
+            <a href="https://t.me/Hangpanharajame">
+              <span className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-600 cursor-pointer">
+             <FaTelegram />
+            </span></a>
+         
+           <a href= "https://github.com/jakma911">
+             <span className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700  hover:bg-gray-900 cursor-pointer">
+             <FaGithub />
+            </span>
+           </a>
           </div>
+          </ul>
         </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700 text-center py-4 text-sm">
+        © {new Date().getFullYear()} iMusic. Feel the rhythm.
       </div>
     </footer>
   );

@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsPersonCheckFill } from "react-icons/bs";
 import { GiLoveSong } from "react-icons/gi";
 import { MdAlbum } from "react-icons/md";
 import img from '../assets/image/vannda.png'; 
 import Card from "./Card";
 
+  
 const Home = () => {
+   const [showSignUp, setShowSignUp] = useState(false);
+  const handleSignUp = () => {
+    alert("Sign Up successful!");
+    setShowSignUp(false);
+  };
   return (
    <div>
      <div className="min-h-screen scroll-smooth bg-gray-900 selection:bg-violet-500/30">
@@ -98,7 +104,80 @@ const Home = () => {
       </div>
     </div>
        <Card />
+          <nav className="fixed bottom-0 left-0 w-full backdrop-blur-3xl text-white p-4 md:px-8 shadow-2xl z-50">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         
+        {/* Text Content */}
+        <div className="text-center md:text-left">
+          <p className="text-xs  tracking-widest font-semibold mb-1">
+            Preview of i<span className="text-orange-500
+             ">Home</span>
+          </p>
+          <p className="text-sm md:text-base font-medium">
+            Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+          </p>
+        </div>
+
+        {/*Action Button */}
+     
+         <button   onClick={() => setShowSignUp(true)}   className="bg-white text-black px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform active:scale-95 whitespace-nowrap">
+          Sign up free
+        </button>
+    
+        
+      </div>
+    </nav>
+    {/* Signip */}
+   {showSignUp && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black/70 z-50 p-4"
+          onClick={() => setShowSignUp(false)}
+        >
+          <div
+            className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl w-full max-w-md relative shadow-2xl border border-gray-700"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowSignUp(false)}
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white text-3xl hover:text-red-500 transition-colors"
+            >
+              
+            </button>
+            <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Create Account
+            </h2>
+            <div className="flex flex-col gap-3 sm:gap-4">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
+              />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className="px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
+              />
+              <button
+                onClick={handleSignUp}
+                className="px-4 py-2.5 sm:py-3 bg-gradient-to-br from-white via-gray-500 to-gray-100 text-white rounded-lg font-semibold hover:from-gray-100 hover:via-blue-500 hover:to-gray-200 mt-2 text-sm sm:text-base"
+              >
+                Sign Up
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      )}
    </div>
   );
 };
