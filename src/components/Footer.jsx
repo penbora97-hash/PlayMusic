@@ -3,6 +3,7 @@ import { FaTelegram } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#1f2937] text-gray-300">
@@ -25,13 +26,13 @@ const Footer = () => {
           <h2 className="text-white font-semibold mb-4">Quick Links</h2>
           <ul className="space-y-3 text-sm">
             <li className="hover:text-white cursor-pointer">
-              <a href="/">About Our Music</a>
+             <Link to="/">Home</Link>
             </li>
             <li className="hover:text-white cursor-pointer">
-              <a href="/artist">Artists</a>
+             <Link to="/artist">Artist</Link>
             </li>
             <li className="hover:text-white cursor-pointer">
-              <a href="/playlist ">Albums</a>
+             <Link to="/playlist">Alblum</Link>
             </li>
             <li className="hover:text-white cursor-pointer">
               Privacy & Policy
@@ -44,10 +45,10 @@ const Footer = () => {
           <h2 className="text-white font-semibold mb-4">Music Hub</h2>
           <ul className="space-y-3 text-sm">
             <li className="hover:text-white cursor-pointer">
-              <a href="/about-us">About Us</a>
+             <Link to="/about-us">About Us</Link>
             </li>
             <li className="hover:text-white cursor-pointer">
-              <a href="/premium">Get Premium</a>
+             <Link to="/premium">Get Premium</Link>
             </li>
             <li className="hover:text-white cursor-pointer">Latest Releases</li>
             <li className="hover:text-white cursor-pointer">
