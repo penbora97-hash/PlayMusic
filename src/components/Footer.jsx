@@ -2,7 +2,7 @@ import React from "react";
 import { FaTelegram } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-
+import { Route } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#1f2937] text-gray-300">
