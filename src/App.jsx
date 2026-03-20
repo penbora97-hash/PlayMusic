@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Premium from "./components/Premium";
 import SongPage from "./components/SongPage";
 
+
 const App = () => {
   return (
     <div>
@@ -25,6 +26,8 @@ const App = () => {
 
           <Route path="/song/:id" element={<SongPage />} />
           <Route path="/about-us" element={<AboutUs />} />
+      
+        
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
         <Footer />

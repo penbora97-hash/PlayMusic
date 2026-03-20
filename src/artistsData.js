@@ -59,6 +59,8 @@ import  song70 from './assets/Music/Tep Piseth - សរង (Official Audio2).mp3
 import song71 from './assets/Music/ក្រអូបក្លិនផ្កា.mp3'
 import song72 from './assets/Music/Tep Piseth - WMW (Official Audio).mp3'
 import song73 from './assets/Music/GMENGZ x YUUHAI - PLASTIC GANG (Prod. Aviyoung).mp3'
+import song74 from './assets/Music/DIA_x_GMENGZ_NO_VITAMIN_OFFICIAL_MUSIC_VIDEO_DIA_youtub.m4a'
+import song75 from './assets/Music/GMENGZ_MOONLIGHT_ft_JADY_OFFICIAL_VIDEO_GMENGZ_youtube.m4a'
 export const artistsData = [
   {
     id: 1,
@@ -135,7 +137,7 @@ export const artistsData = [
     name: "G_DEVITH",
 
     image:
-      "https://yt3.googleusercontent.com/GDrDr9yiwJyDXNgapaccunCnAiAKWBK9HqnoRXAvNMbY79zppfoOnFOqmedThRMIQphx1d2Pgg=s900-c-k-c0x00ffffff-no-rj",
+      "https://yt3.googleusercontent.com/HVZilZRebTab0bjoiRIDbD5_akoDgwhhEWUQzlGUUUbCKfkL0dHy6u2O8iNqeRzfzCxWrpDS=s900-c-k-c0x00ffffff-no-rj",
     albums: [
       {
         id: 2,
@@ -354,7 +356,7 @@ export const artistsData = [
     albums: [
       {
         id: 6,
-        title: "Cool",
+        title: "Gcool",
         year: 2024,
         songs: [
           {
@@ -396,6 +398,20 @@ export const artistsData = [
             image:
               "https://i.ytimg.com/vi/GZz7vuLNYic/maxresdefault.jpg",
             audio: song73,
+          },
+          {
+            id: 7,
+            title: "NO VITAMIN",
+            image:
+              "https://i.ytimg.com/vi/76SB1b8riE4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAOX1OGfCjgkX49E76qfglg04E0Rw",
+            audio: song74,
+          },
+          {
+            id: 8,
+            title: "MOONLIGHT",
+            image:
+              "https://i.ytimg.com/vi/yMINha31-uw/maxresdefault.jpg",
+            audio: song75,
           },
         ],
       },

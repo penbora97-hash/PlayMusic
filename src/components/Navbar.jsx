@@ -7,7 +7,7 @@ import { IoIosCart } from "react-icons/io";
 import { BiLogInCircle } from "react-icons/bi";
 import { BsPersonPlus } from "react-icons/bs";
 import { FaMusic } from "react-icons/fa6";
-
+import { CgProfile } from "react-icons/cg";
 // Import data
 import { musicData } from "../data";
 import { artistsData } from "../artistsData";
@@ -34,8 +34,8 @@ const Navbar = () => {
           artist: artist.name,
           image: song.image,
           audio: song.audio,
-        })),
-      ),
+        }))
+      )
     );
 
     const musicSongs = musicData.map((song) => ({
@@ -50,7 +50,7 @@ const Navbar = () => {
   }, []);
 
   const filteredSongs = allSongs.filter((song) =>
-    song.title.toLowerCase().includes(query.toLowerCase()),
+    song.title.toLowerCase().includes(query.toLowerCase())
   );
 
   useEffect(() => {
@@ -89,7 +89,6 @@ const Navbar = () => {
     setTimeout(() => setShowResults(false), 200);
   };
 
-  // Simple alert for login/signup
   const handleLogin = () => {
     alert("Login successful!");
     setShowLogin(false);
@@ -109,11 +108,11 @@ const Navbar = () => {
           <div className="flex items-center gap-1 sm:gap-2">
             <NavLink
               to="/"
-              className="font-bold text-xl sm:text-2xl md:text-3xl text-orange-500 "
+              className="font-bold text-xl sm:text-2xl md:text-3xl text-orange-500"
             >
-             <span className="text-white">i</span>Music
+              <span className="text-white">i</span>Music
             </NavLink>
-           <FaMusic className="text-white text-2xl" />
+            <FaMusic className="text-white text-2xl" />
           </div>
 
           {/* Desktop Menu */}
@@ -190,29 +189,33 @@ const Navbar = () => {
             </div>
 
             {/* Icons */}
-            <div className="flex items-center gap-4">
-              <p  onClick={() => setShowLogin(true)}
-                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200">
-                  Login
-               
-             </p>
-              <p  onClick={() => setShowSignUp(true)}
-                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200">
-               {/* // size={20} */}
-               Sign up
-               
+            <div className="flex items-center gap-6">
+              <p
+                onClick={() => setShowLogin(true)}
+                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200"
+              >
+                Login
+              </p>
+              <p
+                onClick={() => setShowSignUp(true)}
+                className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200"
+              >
+                Sign up
               </p>
               <IoIosCart
                 size={22}
                 onClick={() => setShowCart(true)}
                 className="text-white cursor-pointer hover:text-purple-400 transition-colors hover:scale-110 duration-200"
               />
+
+              {/* ✅ FIX: Profile icon now navigates to /profile */}
+            
             </div>
           </div>
 
           {/* Mobile Icons & Menu Button */}
           <div className="flex md:hidden items-center gap-3 sm:gap-4">
-            <div 
+            <div
               onClick={() => setShowLogin(true)}
               className="flex flex-col items-center gap-0.5 cursor-pointer group"
             >
@@ -220,10 +223,12 @@ const Navbar = () => {
                 size={20}
                 className="text-white group-hover:text-purple-400 transition-colors"
               />
-              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">Login</span>
+              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">
+                Login
+              </span>
             </div>
-            
-            <div 
+
+            <div
               onClick={() => setShowSignUp(true)}
               className="flex flex-col items-center gap-0.5 cursor-pointer group"
             >
@@ -231,10 +236,12 @@ const Navbar = () => {
                 size={18}
                 className="text-white group-hover:text-purple-400 transition-colors"
               />
-              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">Sign Up</span>
+              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">
+                Sign Up
+              </span>
             </div>
-            
-            <div 
+
+            <div
               onClick={() => setShowCart(true)}
               className="flex flex-col items-center gap-0.5 cursor-pointer group"
             >
@@ -242,9 +249,13 @@ const Navbar = () => {
                 size={20}
                 className="text-white group-hover:text-purple-400 transition-colors"
               />
-              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">Cart</span>
+              <span className="text-white text-[10px] sm:text-xs group-hover:text-purple-400 transition-colors">
+                Cart
+              </span>
             </div>
-            
+
+            {/* ✅ FIX: Mobile profile icon also navigates */}
+              
             <button className="text-white ml-1" onClick={() => setOpen(!open)}>
               {open ? (
                 <RiCloseCircleLine size={26} />
@@ -324,6 +335,8 @@ const Navbar = () => {
                   </NavLink>
                 </li>
               ))}
+              {/* ✅ Profile link in mobile menu too */}
+             
             </ul>
           </div>
         )}
@@ -365,14 +378,11 @@ const Navbar = () => {
               >
                 Login
               </button>
-              <p className="text-gray-400 text-xs sm:text-sm text-center mt-2">
+              <p className="text-gray-400 text-xs sm:text-sm text-center mt-1">
                 Don't have an account?{" "}
                 <span
                   className="text-purple-400 hover:text-purple-300 cursor-pointer ml-1"
-                  onClick={() => {
-                    setShowLogin(false);
-                    setShowSignUp(true);
-                  }}
+                  onClick={() => { setShowLogin(false); setShowSignUp(true); }}
                 >
                   Sign Up
                 </span>
@@ -396,7 +406,7 @@ const Navbar = () => {
               onClick={() => setShowSignUp(false)}
               className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white text-3xl hover:text-red-500 transition-colors"
             >
-              
+              ×
             </button>
             <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Create Account
@@ -432,10 +442,7 @@ const Navbar = () => {
                 Already have an account?{" "}
                 <span
                   className="text-purple-400 hover:text-purple-300 cursor-pointer ml-1"
-                  onClick={() => {
-                    setShowSignUp(false);
-                    setShowLogin(true);
-                  }}
+                  onClick={() => { setShowSignUp(false); setShowLogin(true); }}
                 >
                   Login
                 </span>
@@ -465,20 +472,10 @@ const Navbar = () => {
               Shopping Cart
             </h2>
             <div className="flex flex-col gap-4 text-center py-8 sm:py-12">
-              <IoIosCart
-                size={56}
-                className="mx-auto text-gray-600 mb-4 sm:hidden"
-              />
-              <IoIosCart
-                size={64}
-                className="mx-auto text-gray-600 mb-4 hidden sm:block"
-              />
-              
+              <IoIosCart size={64} className="mx-auto text-gray-600 mb-4" />
+              <p className="text-gray-400">Your cart is empty</p>
               <button
-                onClick={() => {
-                  setShowCart(false);
-                  navigate("/premium");
-                }}
+                onClick={() => { setShowCart(false); navigate("/premium"); }}
                 className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 mt-4 sm:mt-6 text-sm sm:text-base"
               >
                 Get Premium

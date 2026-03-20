@@ -182,10 +182,10 @@ export default function SongPage() {
 
                 <button
                   onClick={togglePlay}
-                  className="w-16 h-16 bg-gradient-to-br bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all"
+                  className="w-16 h-16 bg-gradient-to-br bg-white  rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all"
                 >
                   {playing ? (
-                    <IoPause size={32} />
+                    <IoPause size={32} className="text-black"/>
                   ) : (
                     <IoPlay size={32} className="ml-1 text-black" />
                   )}

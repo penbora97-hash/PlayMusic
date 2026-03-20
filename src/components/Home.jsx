@@ -111,7 +111,7 @@ const Home = () => {
         <div className="text-center md:text-left">
           <p className="text-xs  tracking-widest font-semibold mb-1">
             Preview of i<span className="text-orange-500
-             ">Home</span>
+             ">Music</span>
           </p>
           <p className="text-sm md:text-base font-medium">
             Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
