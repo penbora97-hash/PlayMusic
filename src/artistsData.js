@@ -31,36 +31,38 @@ import song52 from "../src/assets/Music/ZEDES_ករឡកទករង_Remix_Pro
 import song55 from "../src/assets/Music/d.mp3";
 import song56 from ".//assets/Music/GMENGZ - Can I.mp3";
 import song57 from "../src/assets/Music/01 OLD MONEY.m4a";
-import song9 from './assets/Music/ចុះរាល់ដង_.mp3'
-import song10 from './assets/Music/Love Taste .mp3'
-import song11 from './assets/Music/PEM PEM.mp3'
-import song12 from './assets/Music/កុំច្រឡុំ .mp3'
+import song9 from "./assets/Music/ចុះរាល់ដង.mp3";
+import song10 from "../src/assets/Music/Love Taste .mp3";
+import song11 from "./assets/Music/PEM PEM.mp3";
+import song12 from "./assets/Music/GMENGZ_កុំច្រឡំ_បងទេីបតែពេញកំលោះ_OFFICIAL_LYRIC_VIDEO_Qf0DpY8Lcdg.mp3";
 //ditway
-import song13 from './assets/Music/01 My Princess.m4a'
-import song14 from './assets/Music/G_DEVITH_ចុម!_អាអូនអត់ដេក_Insomnia_Huh!_3jya6IKzg5w.mp3'
-import song15 from './assets/Music/នារីទំនើង .mp3'
-import song16 from './assets/Music/សារ៉ាវ៉ាន់សុំស្នេហ៍_G_Devith.mp3'
-import song17 from './assets/Music/ឱ!_សង្សារបងហ្អេីយ_G_Devith、ហួរ_ឡាវី.mp3'
-import song58 from './assets/Music/NPN - Channavinlyna.mp3'
+import song13 from "./assets/Music/01 My Princess.m4a";
+import song14 from "./assets/Music/G_DEVITH_ចុម!_អាអូនអត់ដេក_Insomnia_Huh!_3jya6IKzg5w.mp3";
+import song15 from "./assets/Music/នារីទំនើង .mp3";
+import song16 from "./assets/Music/សារ៉ាវ៉ាន់សុំស្នេហ៍_G_Devith.mp3";
+import song17 from "./assets/Music/ឱ!_សង្សារបងហ្អេីយ_G_Devith、ហួរ_ឡាវី.mp3";
+import song58 from "./assets/Music/NPN - Channavinlyna.mp3";
 //Lacima
-import song59 from './assets/Music/ALL3RGY,_YCN_DIZZY_MEEZY24K_មយខសត_One_Kiss_Official_Visua.m4a'
-import song60 from './assets/Music/All3rgy_YCN_TOMIE_PPSTAR_Remix_ft_Hasha_Official_Music_V.m4a'
-import song61 from './assets/Music/MEEZY24K,_HASHA_អនសត_Official_Visualizer_La_Cima_Cartel_y.m4a'
-import song62 from './assets/Music/MUT_PHEARIN_YCN_TOMIE_កំរ_Official_VisualizerMP3_160K.mp3'
-import song63 from './/assets/Music/Mut_Phearin_&_YCN_Tomie_លួង_Official_Visualizer.mp3'
-import song64 from './assets/Music/YCN Rakhie - 007 (Official Music Video) - La Cima Cartel.m4a'
-import  song65 from './assets/Music/YCN_DIZZY_ត្រគាកសាយ_អើយនាង_ft_HASHA_&_NPN_Official_Lyric_Video.mp3'
-import song66 from './assets/Music/YCN_RAKHIE,_ALL3RGY_10_Official_Visualizer_La_Cima_Cartel.m4a'
-import song67 from './assets/Music/YCN_TOMIE,_HASHA_សរមយកវ_My_Juice_Official_Visualizer_La.m4a'
- 
-import song68 from './assets/Music/20’OUTNOW - Tep Piseth ft. RICKY, CHANNTY , NPN.mp3'
-import song69 from './assets/Music/Go Far Away.mp3'
-import  song70 from './assets/Music/Tep Piseth - សរង (Official Audio2).mp3'
-import song71 from './assets/Music/ក្រអូបក្លិនផ្កា.mp3'
-import song72 from './assets/Music/Tep Piseth - WMW (Official Audio).mp3'
-import song73 from './assets/Music/GMENGZ x YUUHAI - PLASTIC GANG (Prod. Aviyoung).mp3'
-import song74 from './assets/Music/DIA_x_GMENGZ_NO_VITAMIN_OFFICIAL_MUSIC_VIDEO_DIA_youtub.m4a'
-import song75 from './assets/Music/GMENGZ_MOONLIGHT_ft_JADY_OFFICIAL_VIDEO_GMENGZ_youtube.m4a'
+import song59 from "./assets/Music/ALL3RGY,_YCN_DIZZY_MEEZY24K_មយខសត_One_Kiss_Official_Visua.m4a";
+import song60 from "./assets/Music/All3rgy_YCN_TOMIE_PPSTAR_Remix_ft_Hasha_Official_Music_V.m4a";
+import song61 from "./assets/Music/MEEZY24K,_HASHA_អនសត_Official_Visualizer_La_Cima_Cartel_y.m4a";
+import song62 from "./assets/Music/MUT_PHEARIN_YCN_TOMIE_កំរ_Official_VisualizerMP3_160K.mp3";
+import song63 from ".//assets/Music/Mut_Phearin_&_YCN_Tomie_លួង_Official_Visualizer.mp3";
+import song64 from "./assets/Music/YCN Rakhie - 007 (Official Music Video) - La Cima Cartel.m4a";
+import song65 from "./assets/Music/YCN_DIZZY_ត្រគាកសាយ_អើយនាង_ft_HASHA_&_NPN_Official_Lyric_Video.mp3";
+import song66 from "./assets/Music/YCN_RAKHIE,_ALL3RGY_10_Official_Visualizer_La_Cima_Cartel.m4a";
+import song67 from "./assets/Music/YCN_TOMIE,_HASHA_សរមយកវ_My_Juice_Official_Visualizer_La.m4a";
+
+import song68 from "./assets/Music/20’OUTNOW - Tep Piseth ft. RICKY, CHANNTY , NPN.mp3";
+import song69 from "./assets/Music/Go Far Away.mp3";
+import song70 from "./assets/Music/Tep Piseth - សរង (Official Audio2).mp3";
+import song71 from "./assets/Music/ក្រអូបក្លិនផ្កា.mp3";
+import song72 from "./assets/Music/Tep Piseth - WMW (Official Audio).mp3";
+import song73 from "./assets/Music/GMENGZ x YUUHAI - PLASTIC GANG (Prod. Aviyoung).mp3";
+import song74 from "./assets/Music/DIA_x_GMENGZ_NO_VITAMIN_OFFICIAL_MUSIC_VIDEO_DIA_youtub.m4a";
+import song75 from "./assets/Music/GMENGZ_MOONLIGHT_ft_JADY_OFFICIAL_VIDEO_GMENGZ_youtube.m4a";
+import song76 from './assets/Music/ម៉ូតសក់ថ្មី.mp3'
+import song77 from './assets/Music/GMENGZ - ANGEL.mp4 - GMENGZ.mp3'
 export const artistsData = [
   {
     id: 1,
@@ -179,7 +181,8 @@ export const artistsData = [
             id: 5,
             title: "My Princess",
 
-            image: "https://i.ytimg.com/vi/jM8oVshMwgY/oar2.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLA6wbCnvI1zw2LbAhpWy3lg0dW5ow",
+            image:
+              "https://i.ytimg.com/vi/jM8oVshMwgY/oar2.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLA6wbCnvI1zw2LbAhpWy3lg0dW5ow",
             audio: song13,
           },
           {
@@ -275,8 +278,7 @@ export const artistsData = [
           {
             id: 2,
             title: "ចុះរាល់ដង",
-            image:
-              "https://i.ytimg.com/vi/LfXLd5y950o/maxresdefault.jpg",
+            image: "https://i.ytimg.com/vi/LfXLd5y950o/maxresdefault.jpg",
             audio: song9,
           },
 
@@ -290,22 +292,19 @@ export const artistsData = [
           {
             id: 4,
             title: "20`OUT NOW",
-            image:
-              "https://i.ytimg.com/vi/2fV7bxIaovk/maxresdefault.jpg",
+            image: "https://i.ytimg.com/vi/2fV7bxIaovk/maxresdefault.jpg",
             audio: song68,
           },
           {
             id: 5,
             title: "GO FAR AWAY",
-            image:
-              "https://i.ytimg.com/vi/y59PIlK9H7E/mqdefault.jpg",
+            image: "https://i.ytimg.com/vi/y59PIlK9H7E/mqdefault.jpg",
             audio: song69,
           },
           {
-            id:6,
+            id: 6,
             title: "ស្រីង៉ា",
-            image:
-              "https://i.ytimg.com/vi/JLscU_JX-FM/maxresdefault.jpg",
+            image: "https://i.ytimg.com/vi/JLscU_JX-FM/maxresdefault.jpg",
             audio: song70,
           },
           {
@@ -318,11 +317,15 @@ export const artistsData = [
           {
             id: 8,
             title: "WMW",
-            image:
-              "https://i.ytimg.com/vi/V8_9Xw22SVo/maxresdefault.jpg",
+            image: "https://i.ytimg.com/vi/V8_9Xw22SVo/maxresdefault.jpg",
             audio: song72,
           },
-         
+          {
+            id: 9,
+            title: "ម៉ូតសក់ថ្មី",
+            image: "https://i.ytimg.com/vi/aLjXQuGyxD4/maxresdefault.jpg",
+            audio: song76,
+          },
         ],
       },
     ],
@@ -395,8 +398,7 @@ export const artistsData = [
           {
             id: 6,
             title: "PLASTIC GANG",
-            image:
-              "https://i.ytimg.com/vi/GZz7vuLNYic/maxresdefault.jpg",
+            image: "https://i.ytimg.com/vi/GZz7vuLNYic/maxresdefault.jpg",
             audio: song73,
           },
           {
@@ -409,9 +411,14 @@ export const artistsData = [
           {
             id: 8,
             title: "MOONLIGHT",
-            image:
-              "https://i.ytimg.com/vi/yMINha31-uw/maxresdefault.jpg",
+            image: "https://i.ytimg.com/vi/yMINha31-uw/maxresdefault.jpg",
             audio: song75,
+          },
+           {
+            id: 9,
+            title: "Angel",
+            image: "https://i.ytimg.com/vi/C3ahBXzq6f4/hqdefault.jpg?v=6aa15f5c",
+            audio: song77,
           },
         ],
       },
@@ -497,7 +504,8 @@ export const artistsData = [
           {
             id: 1,
             title: "Channavinlyna",
-            image: "https://i.scdn.co/image/ab67616d0000b273be227c9db5520a5116affe8a ",
+            image:
+              "https://i.scdn.co/image/ab67616d0000b273be227c9db5520a5116affe8a ",
             audio: song58,
           },
         ],
@@ -508,8 +516,7 @@ export const artistsData = [
   {
     id: 11,
     name: "Lacima Cartel",
-    image:
-      "https://i.scdn.co/image/ab6761610000e5ebd7f75367f4aed75fee751910",
+    image: "https://i.scdn.co/image/ab6761610000e5ebd7f75367f4aed75fee751910",
     albums: [
       {
         id: 4,
@@ -525,7 +532,8 @@ export const artistsData = [
           {
             id: 2,
             title: "PPSTAR",
-            image: "https://i.ytimg.com/vi/ZpgP5cbeqv0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCG5w83TlJrP5_tPfexnZmQh1qCDQ",
+            image:
+              "https://i.ytimg.com/vi/ZpgP5cbeqv0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCG5w83TlJrP5_tPfexnZmQh1qCDQ",
             audio: song60,
           },
           {
@@ -543,11 +551,12 @@ export const artistsData = [
           {
             id: 5,
             title: "លួង",
-            image: "https://i.ytimg.com/vi/Hc7lW7VccVw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDLKjOPAegqPJDrWQlhIB0aiuNoxQ",
+            image:
+              "https://i.ytimg.com/vi/Hc7lW7VccVw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDLKjOPAegqPJDrWQlhIB0aiuNoxQ",
             audio: song63,
           },
           {
-            id:6,
+            id: 6,
             title: "007",
             image: "https://i.ytimg.com/vi/ke70bLeIECo/sddefault.jpg",
             audio: song64,
@@ -555,13 +564,15 @@ export const artistsData = [
           {
             id: 7,
             title: "ត្រគាកសាយ_អើយនាង",
-            image: "https://i.ytimg.com/vi/2Sp_4jy--GA/hqdefault.jpg?v=6788dbf0",
+            image:
+              "https://i.ytimg.com/vi/2Sp_4jy--GA/hqdefault.jpg?v=6788dbf0",
             audio: song65,
           },
           {
             id: 8,
             title: "10",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkumifivyIaf-ezJwVFXrJJqrq0PMsF6RFLA&s",
+            image:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkumifivyIaf-ezJwVFXrJJqrq0PMsF6RFLA&s",
             audio: song66,
           },
           {

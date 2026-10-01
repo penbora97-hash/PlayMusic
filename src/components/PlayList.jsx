@@ -149,7 +149,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-800 pb-32">
       {/* Header with Back Button */}
-      <div className="bg-gray-600 selection:bg-violet-500/30px-6 pt-8 pb-8">
+      <div className="bg-gray-800 selection:bg-violet-500/30px-6 pt-8 pb-8">
         {/* Artist Profile with Back Button */}
         <div className="flex items-center justify-between mb-6 mt-15">
           {/* Back Button - Left Side */}
@@ -173,7 +173,7 @@ export default function App() {
 
         {/* Artist Info */}
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-1">{artist.name}</h1>
+          <h1 className="text-2xl font-bold text-white mb-1">{artist.name}</h1>
           <p className="text-gray-600 text-sm mb-4">{artist.listens}</p>
           
           <div className="flex gap-4">
@@ -202,11 +202,11 @@ export default function App() {
             {/* Album Header - Clickable */}
             <div 
               onClick={() => toggleAlbum(album.id)}
-              className="flex items-center justify-between py-4 cursor-pointer bg-gray-200 hover:bg-gray-50 rounded-lg px-3 transition"
+              className="flex items-center justify-between py-4 cursor-pointer bg-gray-500 hover:bg-gray-50 rounded-lg px-3 transition"
             >
               <h2 className="text-lg font-bold text-gray-900">{album.title}</h2>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-500">{album.songs.length} songs</span>
+              <div className="flex items-center gap-2 ">
+                <span className="text-sm text-gray-800">{album.songs.length} songs</span>
                 <div className={`transform transition-transform duration-300 ${expandedAlbum === album.id ? 'rotate-180' : ''}`}>
                   <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -217,7 +217,7 @@ export default function App() {
             
             {/* Songs List - Expandable */}
             {expandedAlbum === album.id && (
-              <div className="space-y-3 mt-2 animate-in fade-in slide-in-from-top-2 duration-300 bg-gray-300 rounded-2xl">
+              <div className="space-y-3 mt-2 animate-in fade-in slide-in-from-top-2 duration-300 bg-gray-800 rounded-2xl">
                 {album.songs.map((s, idx) => {
                   const allSongsIndex = allSongs.findIndex(song => song.id === s.id);
                   const isPlaying = song?.id === s.id && playing;
